@@ -37,12 +37,78 @@ STEP 5:Normalizing the data<BR>
 STEP 6:Splitting the data into test and train<BR>
 
 ##  PROGRAM:
-TYPE YOUR CODE HERE
+```
+Developed by: DEEPAK RAJ S
+RegisterNumber: 212222240023
 
-
+import pandas as pd
+import io
+from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import train_test_split
+#Reading the dataset
+df=pd.read_csv("/content/Churn_Modelling.csv", index_col="RowNumber")
+df
+#Dropping the unwanted Columns
+df.drop(['CustomerId'],axis=1,inplace=True)
+df.drop(['Surname'],axis=1,inplace=True)
+df.drop('Age',axis=1,inplace=True)
+df.drop('Geography',axis=1,inplace=True)
+df.drop('Gender',axis=1,inplace=True)
+df
+#Checking for null values
+df.isnull().sum()
+#Checking for duplicate values
+df.duplicated()
+#Describing the dataset
+df.describe()
+#Scaling the dataset
+scaler=StandardScaler()
+df1=pd.DataFrame(scaler.fit_transform(df))
+df1
+#Allocating X and Y attributes
+x=df1.iloc[:,:-1].values
+x
+y=df1.iloc[:,-1].values
+y
+#Splitting the data into training and testing dataset
+x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.2)
+print(x_train)
+print(len(x_train))
+print(x_test)
+print(len(x_test))
+```
 ## OUTPUT:
-SHOW YOUR OUTPUT HERE
+DATASET:
 
+![image](https://github.com/DEEPAK2200233/Ex-1-NN/assets/118707676/564dbb82-2f4f-4a86-b8d9-681f46ea1519)
+
+DROPPING THE UNWANTED DATASET:
+
+![image](https://github.com/DEEPAK2200233/Ex-1-NN/assets/118707676/9bb25efd-5226-46ea-aef1-de170cbf1f6c)
+
+CHECKING NULL VALUES:
+
+![image](https://github.com/DEEPAK2200233/Ex-1-NN/assets/118707676/91474fee-123d-4175-b258-92bbf75723cb)
+
+CHECKING FOR DUPLICATION:
+
+![image](https://github.com/DEEPAK2200233/Ex-1-NN/assets/118707676/90c71c87-f527-4e00-9c0d-3f36b6748e67)
+
+DESCRIBING THE DATASET:
+
+![image](https://github.com/DEEPAK2200233/Ex-1-NN/assets/118707676/02c414f1-451f-4baa-9298-afd1b4d1fedf)
+
+SCALING THE DATASET:
+![image](https://github.com/DEEPAK2200233/Ex-1-NN/assets/118707676/9da6e306-00ef-469d-94b0-162f0e51acdb)
+
+X FEATURES:
+![image](https://github.com/DEEPAK2200233/Ex-1-NN/assets/118707676/d86e8b16-6046-4b4b-ae39-d4321e70d102)
+
+Y FEATURES:
+![image](https://github.com/DEEPAK2200233/Ex-1-NN/assets/118707676/cb0e7656-c6c0-458d-b95d-d3111a07dbc4)
+
+SPLITTING THE TRAINING AND TESTING DATASET:
+![image](https://github.com/DEEPAK2200233/Ex-1-NN/assets/118707676/5f7fb6ae-6e05-4a1b-b4b5-201e51ccb22d)
 
 ## RESULT:
 Thus, Implementation of Data Preprocessing is done in python  using a data set downloaded from Kaggle.
