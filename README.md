@@ -105,7 +105,7 @@ X FEATURES:
 ![image](https://github.com/DEEPAK2200233/Ex-1-NN/assets/118707676/d86e8b16-6046-4b4b-ae39-d4321e70d102)
 
 Y FEATURES:
-![image](https://github.com/DEEPAK2200233/Ex-1-NN/assets/118707676/cb0e7656-c6c0-458d-b95d-d3111a07dbc4)
+![image](https://github.com/DEEPAK2200233/Ex-1-NN/assets/118707676/5b0431f6-6b7d-4f30-acee-e92da9a0a4a3)
 
 SPLITTING THE TRAINING AND TESTING DATASET:
 ![image](https://github.com/DEEPAK2200233/Ex-1-NN/assets/118707676/5f7fb6ae-6e05-4a1b-b4b5-201e51ccb22d)
